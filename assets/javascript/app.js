@@ -119,6 +119,7 @@ function genQuestions () {
       correctAnswer = allQuestions[randomIndex].answer;
       console.log("The correct answer is: " + correctAnswer);
   }
+
 }
  genQuestions();
 
@@ -145,9 +146,10 @@ chooseAnswer();
      
 function nextQuestion() {
     $(".empty-div").empty();
+    secondCount = 21;
     genQuestions();
     runTimer();
-    decrement(secondCount, 21);
+    decrement();
     chooseAnswer();
 }
 
