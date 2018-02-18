@@ -1,36 +1,81 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
 	<meta charset="UTF-8">
- 	 <title>Brain Benderz</title>
- 	 <link rel="icon" type="image/png" href="assets/images/rubiks_cube.png">
+	<title>BRAIN BENDERZ</title>
+	<link rel="icon" type="image/png" href="assets/images/rubiks_cube.png">
+	<link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+	    crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
-<div id = "overall-container">
+	<div class="container-fluid text-center">
+		<div class="row">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-10">
+				<div class="header-wrapper">
+					<div class="title-wrapper">
+						<div class="clip-text clip-text_alchemy">BRAIN BENDERZ</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-1"></div>
+		</div>
+		<div class="row">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-10">
+				<div id="start-wrapper">
+					<button id="start-btn">Start Game</button>
+				</div>
+				<div id="count-wrapper">
+					<div id="count-container">
+						<p>Questions answered correctly:
+							<span id="correct">0</span>
+						</p>
+						<p>Questions answered incorrectly:
+							<span id="wrong">0</span>
+						</p>
+						<p>Question #
+							<span id="questionCount">0</span>
+							of 7
+						</p>
+					</div>
+					<div id="time-div">
+						<p>Seconds left:
+							<span id="time-left">30</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-1"></div>
+		</div>
+		<div class="row">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-10" id="question-div">
+				<p class="empty-div" id="question-now"></p>
+			</div>
+			<div class="col-sm-1"></div>
+		</div>
+		<div class="row">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-10 empty-div" id="choices-div"></div>
+			<div class="col-sm-1"></div>
+		</div>
+	</div>
 
-<header>
-<h1>Brain Benderz</h1>
-</header>
-
-<section
-<div id = "time-left" class="empty-div"></div>
-
-<div id = "question-div" class="empty-div"></div>
-
-<div id ="choices-div" class="empty-div">
-
-</div>
-
-</div>
-
-</section>
-</div>
-
- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-<script type="text/javascript" src="assets/javascript/app.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	    crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+	    crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+	    crossorigin="anonymous"></script>
+	<script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
+
 </html>

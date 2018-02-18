@@ -2,48 +2,212 @@
 	box-sizing: border-box;
 }
 
+html,
 body {
-	background-color: black;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	margin-left: 100px;
-	margin-right: 100px;
+	min-height: 100%;
+	margin: 0;
+	background-image: url("../images/alchemy.png");
+	text-align: center;
 }
 
-#overall-container {
-	background-color: pink;
+.header-wrapper {
+	border: 15px solid rgba(0, 143, 181, 0.849);
+	margin-top: 30px;
+	margin-left: 80px;
+	margin-right: 80px;
+	background: transparent;
+}
+
+.title-wrapper {
+	margin: 10px;
+	background: rgba(0, 143, 181, 0.849);
+}
+
+.clip-text {
 	width: 100%;
-}
-
-h1{
-	font-size: 48px;
+	font-size: 6.5em;
+	position: relative;
+	display: inline-block;
 	padding: 30px;
 	text-align: center;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: #fff;
+	font-family: 'Megrim', Helvetica, cursive;
+	font-weight: bolder;
+	letter-spacing: 15px;
+	z-index: 2;
+}
+
+.clip-text_alchemy {
+	background-image: url("../images/alchemy.png");
+	z-index: 3;
+}
+
+#start-wrapper {
+	margin-top: 80px;
+	display: block;
+}
+
+#start-btn {
+	outline: none;
+	-moz-box-shadow: inset -9px -13px 20px -8px rgb(187, 64, 33);
+	-webkit-box-shadow: inset -9px -13px 20px -8px rgb(187, 64, 33);
+	box-shadow: inset -9px -13px 20px -8px rgb(187, 64, 33);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, rgb(255, 53, 0)), color-stop(1, rgb(204, 117, 98)));
+	background: -moz-linear-gradient(top, rgb(255, 53, 0) 5%, rgb(204, 117, 98) 100%);
+	background: -webkit-linear-gradient(top, rgb(255, 53, 0) 5%, rgb(204, 117, 98) 100%);
+	background: -o-linear-gradient(top, rgb(255, 53, 0) 5%, rgb(204, 117, 98) 100%);
+	background: -ms-linear-gradient(top, rgb(255, 53, 0) 5%, rgb(204, 117, 98) 100%);
+	background: linear-gradient(to bottom, rgbrgb(255, 53, 0) 5%, rgb(204, 117, 98) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgb(255,53,0)', endColorstr='rgb(204, 117, 98)', GradientType=0);
+	background-color: rgb(255, 53, 0);
+	-moz-border-radius: 42px;
+	-webkit-border-radius: 42px;
+	border-radius: 42px;
+	border: 2px solid rgb(224, 54, 11);
+	overflow: hidden;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: 'Dosis', sans-serif;
+	font-size: 30px;
+	font-weight: bolder;
+	letter-spacing: 7px;
+	padding: 35px 45px;
+	text-shadow: 1px 4px 1px rgb(233, 145, 127);
+}
+
+#start-btn:hover {
+	-moz-box-shadow: inset -9px -13px 20px -8px rgb(189, 83, 102);
+	-webkit-box-shadow: inset -9px -13px 20px -8px rgb(189, 83, 102);
+	box-shadow: inset -9px -13px 20px -8px rgb(189, 83, 102);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, rgb(202, 125, 138)), color-stop(1, rgb(189, 83, 102)));
+	background: -moz-linear-gradient(top, rgb(244, 165, 177) 5%, rgb(202, 125, 138) 100%);
+	background: -webkit-linear-gradient(top, rgb(244, 165, 177) 5%, rgb(202, 125, 138) 100%);
+	background: -o-linear-gradient(top, rgb(244, 165, 177) 5%, rgb(202, 125, 138) 100%);
+	background: -ms-linear-gradient(top, rgb(244, 165, 177) 5%, rgb(202, 125, 138) 100%);
+	background: linear-gradient(to bottom, rgb(244, 165, 177) 5%, rgb(202, 125, 138) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgb(244,165,177)', endColorstr='rgb(202, 125, 138)', GradientType=0);
+	background-color: rgb(244, 165, 177);
+	border: 2px solid rgb(245, 158, 173);
+	text-shadow: 1px 4px 1px rgb(241, 172, 184);
+	-webkit-transform: translateX(-4px);
+	transform: translateX(-4px);
+}
+
+#start-btn:active {
+	background: rgba(0, 0, 0, 0);
+	color: rgb(202, 125, 138);
+	text-shadow: 1px 4px 1px rgb(241, 172, 184);
+	box-shadow: inset 0 0 0 3px;
+	border: 2px solid rgb(202, 125, 138);
+}
+
+#count-wrapper {
+	margin: 20px;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	letter-spacing: 1px;
+}
+
+#count-container {
+	margin-right: 50px;
+	background-color: rgba(10, 209, 209, 0.356);
+	border-radius: 60%;
+	color: rgba(44, 177, 192, 0.788);
+	text-shadow: 1px 1px 1px rgba(47, 49, 49, 0.788);
+	border: 2px dotted rgba(76, 205, 228, 0.788);
+	font-size: 18px;
+	letter-spacing: 2px;
+	line-height: 21px;
+	width: 40%;
+	padding: 10px 20px;
+	font-family: 'Exo 2', Helvetica, sans-serif;
+}
+
+#time-div {
+	margin-left: 50px;
+	background-color: rgba(10, 209, 209, 0.356);
+	border-radius: 60%;
+	border: 2px dotted rgba(76, 205, 228, 0.788);
+	font-size: 20px;
+	letter-spacing: 3px;
+	color: rgba(44, 177, 192, 0.788);
+	text-shadow: 1px 1px 1px rgba(47, 49, 49, 0.788);
+	text-align: center;
+	line-height: 30px;
+	width: 40%;
+	padding: 13px 20px;
+	font-family: 'Exo 2', Helvetica, sans-serif;
 }
 
 #time-left {
-	background-color: yellow;
-	padding-top: 60px;
-	padding-bottom: 60px;
-	padding-left: 100px;
-	padding-right: 100px;
-	text-align: center;
+	font-size: 28px;
 }
 
 #question-div {
-	background-color: orange;
-	padding-top: 80px;
-	padding-bottom: 80px;
-	padding-left: 100px;
-	padding-right: 100px;
+	font-family: 'Dosis', Helvetica, sans-serif;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+#question-now {
+	background-color: rgba(255, 177, 51, 0.856);
+	padding: 10px 15px;
+	font-size: 20px;
+	color: rgba(15, 15, 15, 0.87);
+	text-shadow: 1px 1px 1px rgba(36, 33, 33, 0.781);
+	letter-spacing: 2px;
 	text-align: center;
+	line-height: 30px;
+	border: 2px dashed rgba(236, 156, 27, 0.856);
+	border-radius: 10%;
 }
 
 #choices-div {
-	background-color: purple;
-	padding-top: 100px;
-	padding-bottom: 100px;
-	padding-left: 200px;
-	padding-right: 200px;
-	text-align: left;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.choiceButton {
+	color: rgba(248, 243, 238, 0.884);
+	text-shadow: 1px 1px 1px rgba(253, 199, 149, 0.856);
+	font-size: 19px;
+	line-height: 22px;
+	display: block;
+	justify-content: center;
+	align-items: center;
+	letter-spacing: 3px;
+	font-family: 'Dosis', Helvetica, sans-serif;
+	cursor: pointer;
+	margin: 20px 10px;
+	padding: 15px 25px;
+	background: linear-gradient( to top right, rgba(192, 55, 13, 0.87) 0%, rgba(251, 140, 0, 0.719) 100%);
+	box-shadow: 1px 1px 30px rgb(185, 143, 110);
+	border-width: 10px 16px rgb(223, 153, 32);
+	border-radius: 10px 40px;
+	border-color: rgb(235, 127, 26);
+	outline: none;
+}
+
+.choiceButton:hover {
+	-moz-box-shadow: inset -9px -13px 20px -8px rgba(153, 41, 13, 0.685);
+	-webkit-box-shadow: inset -9px -13px 20px -8px rgba(153, 41, 13, 0.685);
+	box-shadow: inset -9px -13px 20px -8px rgba(153, 41, 13, 0.685);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, rgba(255, 53, 0, 0.8)), color-stop(1, rgba(248, 109, 75, 0.856)));
+	background: -moz-linear-gradient(top, rgba(255, 53, 0, 0.8) 5%, rgba(248, 109, 75, 0.856) 100%);
+	background: -webkit-linear-gradient(top, rgba(255, 53, 0, 0.8) 5%, rgba(248, 109, 75, 0.856) 100%);
+	background: -o-linear-gradient(top, rgba(255, 53, 0, 0.8) 5%, rgba(248, 109, 75, 0.856) 100%);
+	background: -ms-linear-gradient(top, rgba(255, 53, 0, 0.8) 5%, rgba(248, 109, 75, 0.856) 100%);
+	background: linear-gradient(to bottom, rgba(255, 53, 0, 0.8) 5%, rgba(248, 109, 75, 0.856) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(255, 53, 0, 0.8)', endColorstr='rgba(248, 109, 75, 0.856)', GradientType=0);
+	background-color: rgba(255, 53, 0, 0.8);
+	border: 2px solid rgba(211, 64, 35, 0.856);
+	text-shadow: 1px 4px 1px rgba(243, 138, 157, 0.911) 0.856);
+	-webkit-transform: translateX(-4px);
+	transform: translateX(-4px);
 }
